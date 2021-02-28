@@ -4,7 +4,7 @@ import Swal from 'sweetalert2'
 const userActions = {
     nuevoUsuario: newUser =>{
         return async (dispatch, getState) =>{
-            const respuesta = await axios.post('http://localhost:4000/api/signup', newUser)
+            const respuesta = await axios.post('http://budge-online.herokuapp.com/api/signup', newUser)
             dispatch({type: 'LOG_USER', payload: respuesta.data})
         }
     },
@@ -15,7 +15,7 @@ const userActions = {
     },
     logInUser: user =>{
         return async (dispatch, getState) =>{
-            const respuesta = await axios.post('http://localhost:4000/api/signin', user)
+            const respuesta = await axios.post('http://budge-online.herokuapp.com/api/signin', user)
             if(!respuesta.data.success){
                 return respuesta.data
             }
@@ -25,7 +25,7 @@ const userActions = {
     logFromLS: (token) =>{
         return async (dispatch, getState) =>{
             try{            
-                const respuesta = await axios.post('http://localhost:4000/api/user/ls', {token},{
+                const respuesta = await axios.post('http://budge-online.herokuapp.com/api/user/ls', {token},{
                 headers: {
                     Authorization: `Bearer ${token}`
                 }

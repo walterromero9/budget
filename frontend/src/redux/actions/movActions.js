@@ -7,7 +7,7 @@ const movActions = {
             const token = getState().auth.loggedUser ? getState().auth.loggedUser.token : ""
             
             try{
-                const data = await axios.post('http://localhost:4000/api/newMov', mov,{
+                const data = await axios.post('http://budge-online.herokuapp.com/api/newMov', mov,{
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
@@ -26,7 +26,7 @@ const movActions = {
         return async (dispatch,getState) =>{
             const token = getState().auth.loggedUser ? getState().auth.loggedUser.token : ""
             try{
-                const data = await axios.get('http://localhost:4000/api/mov/:userId',{
+                const data = await axios.get('http://budge-online.herokuapp.com/api/mov/:userId',{
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
@@ -47,7 +47,7 @@ const movActions = {
 
             const token = getState().auth.loggedUser ? getState().auth.loggedUser.token : ""
             try{
-                const data = await axios.delete('http://localhost:4000/api/mov/'+_id,{
+                const data = await axios.delete('http://budge-online.herokuapp.com/api/mov/'+_id,{
                     headers:{
                         Authorization: `Bearer ${token}`
                     }
@@ -70,7 +70,7 @@ const movActions = {
 
                 try{
                     
-              const data = await axios.put(`http://localhost:4000/api/mov/${_id}`,newEdited)
+              const data = await axios.put(`http://budge-online.herokuapp.com/api/mov/${_id}`,newEdited)
                 dispatch({type: 'EDITED_MOV', payload: data.data})
             } catch{
                 alert("error")
