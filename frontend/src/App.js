@@ -34,7 +34,6 @@ const App = (props) => {
     <Route exact path='/' component={Main} />
     <Route exact path='/signin' component={SignIn} />
     <Route exact path='/signup' component={SignUp} />
-    
     <Redirect to='/' />
     </Switch>
 
@@ -45,9 +44,7 @@ const App = (props) => {
   <Header/>
     <Switch>
     {routes}
-
     </Switch>
-
   </BrowserRouter>
   </>
   )

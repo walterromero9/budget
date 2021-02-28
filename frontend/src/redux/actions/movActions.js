@@ -1,6 +1,16 @@
 import axios from 'axios'
 import Swal from 'sweetalert2'
+const error = (text) =>{
+    Swal.fire({
+        icon: 'error',
+        title: '¡Error!',
+        text: text,
+        showConfirmButton: false,
+        timer: 4000
+      })
+}
 const movActions = {
+
     newMov: mov =>{
         return async (dispatch,getState) =>{
             
@@ -16,7 +26,7 @@ const movActions = {
                 dispatch({type: 'NEW_MOV',payload: data.data}) 
             } catch(err){
                 if(err.response.status === 401){
-                    alert("Error al agregar Movimientos")
+                    error("Error adding movements")
                     
                 }
             }
@@ -35,7 +45,7 @@ const movActions = {
             } catch(error){
                 if(error.response.status === 401){
                     
-                    alert("Error al obtener datos")
+                    error("Error getting data")
                     
                 }
             }
@@ -54,13 +64,7 @@ const movActions = {
                 })
                 dispatch({type:'REMOVE_MOV',payload: data.data}) 
             } catch(error){
-                Swal.fire({
-                    icon: 'error',
-                    title: '¡Error!',
-                    text: "Algo salio mal. intente mas tarde.",
-                    showConfirmButton: false,
-                    timer: 4000
-                  })
+                error("Something went wrong, try again later")
             }
         }
 
@@ -73,7 +77,7 @@ const movActions = {
               const data = await axios.put(`http://budge-online.herokuapp.com/api/mov/${_id}`,newEdited)
                 dispatch({type: 'EDITED_MOV', payload: data.data})
             } catch{
-                alert("error")
+                error("Error,try again later")
             }
 
             

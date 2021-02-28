@@ -1,7 +1,7 @@
 const Movements = require('../models/Movements')
 const jwt = require('jsonwebtoken')
 const movControllers = {
-    // Agregar Movimiento
+    // Add moves
     addMov: (req,res, next) =>{
         const userId = req.user._id
         const {concept,amount,date,type} = req.body
@@ -11,14 +11,14 @@ const movControllers = {
             return res.json({success: !error ? true : false, error, mov})
         })
     },
-    // Obtener Movimientos por userId
+    //Get moves
     userMov: async (req,res, next) =>{
         const userId = req.user._id
         var userMovs = await Movements.find({userId})
         .then(respuesta => res.json({success: true,respuesta}))
         .catch(error => res.json({success:false,error}))
     },
-    // Borrar Movimiento
+    // Delete Moves
     deleteMov: async (req,res,next) =>{
         const {movID} = req.params
         
@@ -28,6 +28,7 @@ const movControllers = {
         .catch(error => res.json({succes: false, error}))
         
     },
+    // Modify Moves
     modifyMov: async(req,res,next) =>{
         
         const {id} = req.params
