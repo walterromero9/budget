@@ -87,7 +87,7 @@ const responseGoogle = async (response) => {
             </div>
             <div className="google">
                 <GoogleLogin
-                clientId="8788813292-urnpbfuh65ccki09tkpc6ru5h2q1jlcc.apps.googleusercontent.com"
+                clientId="8788813292-rlhs4nsqhlhs6hdn53u0ftj92tk5mu5k.apps.googleusercontent.com"
                 buttonText="Login with Google"
                 onSuccess={responseGoogle}
                 onFailure={responseGoogle}
