@@ -1,0 +1,231 @@
+html *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  position: relative;
+}
+body{
+  background-image: url(./assets/images/background.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+#root{
+  font-family: 'Source Sans Pro', sans-serif;
+  
+}
+/* Header */
+h1{
+  color: rgba(3, 3, 3, 0.562);
+  margin-left: 1vw;
+}
+a:hover{
+  text-decoration: none;
+  color: black;
+}
+a{
+  color: black;
+}
+.navbar{
+  padding: 0;
+  flex-wrap: nowrap;
+  flex-direction: row-reverse;
+}
+
+.containerHeader{
+  background-color: rgba(250, 235, 215, 0.014);
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2vh;
+}
+.home,.signIn,.signUp{
+  margin-right: 1vw;
+  color: black;
+  font-size: large;
+  text-decoration: none;
+}
+/* Register */
+.titleRegister{
+  color: whitesmoke;
+  background-color: gray;
+  text-align: center;
+  height: 6vh;
+  margin-bottom: 5px;
+}
+.containerRegister{
+  
+  display: flex;
+  justify-content: center;
+}
+.containerInput{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 50vw;
+
+}
+.google{
+  display: flex;
+  justify-content: center;
+}
+.subReg{
+  display: flex;
+  justify-content: center;
+  
+}
+input{
+  height: 7vh;
+  width: 100%;
+  margin: 1vh auto;
+  border: none;
+  background-color: rgba(255, 255, 255, 0.514);
+  text-align: center;
+}
+::placeholder { 
+  color: black;
+font-weight: bold;
+}
+
+/* Home */
+.containerHome, .containerMain{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+.infoHome, .infoMain{
+  display: flex;
+  text-align: center;
+  background-color: rgba(128, 128, 128, 0.596);
+  height: 50vh;
+  width: 70%;
+  flex-direction: column;
+}
+h3{
+  background-color: rgba(3, 3, 3, 0.562);
+  color: white;
+}
+.containerBalance{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-align: center;
+  width: 70%;
+  height: 10%;
+  background-color: rgba(3, 3, 3, 0.562);
+  font-size: 25px;
+}
+
+.containerOperation{
+  display: flex;
+  justify-content: space-between;
+}
+.containerOperation Button{
+  margin-top: 5px;
+  width: 70vw;
+}
+
+.selectType{
+  width: 100%;
+}
+.conceptEntry{
+  background-color: rgba(0, 128, 0, 0.39);
+  color:rgb(221, 213, 202);
+  
+}
+.conceptEgress{
+  background-color: rgba(255, 0, 0, 0.39);
+  color:rgb(221, 213, 202);
+}
+.lastMoves, .titleMain{
+
+  font-family: cursive;
+  margin-bottom: 1vh;
+}
+
+/* ABM */
+.containerABM{
+  display: flex;
+  flex-direction: column;
+
+
+}
+
+.conceptABMG{
+  
+  background-color: rgb(221, 213, 202);
+  color: black;
+  margin: 4px auto;
+}
+.conceptABMR{
+  background-color: rgb(233, 233, 233);
+  color: black;
+}
+.thTable{
+  background-color: rgba(0, 0, 0, 0.541);
+  color: whitesmoke;
+  
+}
+
+/* noMovements */
+.noMovements{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+
+/* Media */
+@media (max-width: 600px) {
+  h1{
+    font-size: 20px;
+  }
+  .home,.signIn,.signUp{
+    margin-right: 1vw;
+    color: black;
+    font-size: 17px;
+    text-decoration: none;
+  }
+  h5{
+    font-size: 15px;
+  }
+  h6{
+    font-size: 13px
+  }
+
+}
+
+
+/* */
+h6{
+  font-weight: bolder;
+}
+.subContainerMain{
+  display: flex;
+  flex-direction: column;
+}
+.technologies{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.developed{
+  margin-top: 5vh;
+  display: flex;
+  justify-content: center;
+  font-weight: bolder;
+  flex-direction: column;
+}
+
+.developed  div img{
+  height: 25px;
+  width: 25px;
+  margin: 2vh;
+}
