@@ -11,7 +11,7 @@ const Home = (props) => {
     var valoresNew = valores.slice(valores.length-10)
       useEffect(()=>{
         props.listMovs()
-    },[valoresNew])
+    },[])
 if (valoresNew.length === 0 ) {
     return(
         <div className="noMovements">
