@@ -27,7 +27,7 @@ export const Main = () => {
                         <div className="developed">
                             <p>Developed by: Walter Romero</p>
                             <div>
-                                <a href="https://www.linkedin.com/in/walterromero09/"><img src="assets/images/61109.png"></img></a>
+                                <a target="_blank" href="https://www.linkedin.com/in/walterromero09/"><img src="assets/images/61109.png"></img></a>
                                 <a href="mailto:wromero1893@gmail.com"><img src="assets/images/email.png"></img></a>
                             </div>
                         </div>
