@@ -46,11 +46,9 @@ const Header = (props) => {
     return (
         <>
             <header className="containerHeader">
-                <Link to="/"><h1>Budge Online</h1></Link>
+                <Link to="/"><h1>Budget Online</h1></Link>
                 
-                {/* <nav className="containerNav">
-               {links}
-                </nav> */}
+
             <Navbar color="faded" light>
                 <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!collapsed} navbar>
