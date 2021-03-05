@@ -47,8 +47,6 @@ const Header = (props) => {
         <>
             <header className="containerHeader">
                 <Link to="/"><h1>Budget Online</h1></Link>
-                
-
             <Navbar color="faded" light>
                 <NavbarToggler onClick={toggleNavbar} className="mr-2" />
                 <Collapse isOpen={!collapsed} navbar>

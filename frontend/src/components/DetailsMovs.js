@@ -9,11 +9,14 @@ import ABM from './ABM';
 const DetailsMovs = (props) => {
     const [editMov, setEditMov] = useState({})
     const [newEdited,setNewEdited] = useState({})
+    const {id} = props.match.params
+    const movi = props.mov.filter(movi => movi._id === id)
     useEffect(()=>{
-        const {id} = props.match.params
-        const movi = props.mov.filter(movi => movi._id === id)
-        setEditMov(movi[0])
-    },[])
+        if(movi.length>0){
+        setEditMov(movi[0]) 
+        }
+    },[movi])
+
     const capEntry = e =>{
         e.preventDefault()
         const campo = e.target.name
@@ -23,6 +26,7 @@ const DetailsMovs = (props) => {
             [campo] : valor,
         })
     }
+
     const success  = (icon,title,text) =>{
         Swal.fire({
             icon: icon,
@@ -54,16 +58,14 @@ const DetailsMovs = (props) => {
 
 }
 
-
-    
     return (
-        <>
+        <>     
         <div className="containerHome">
             <div className="infoHome">
                 <div className="containerMoves">
                     <h3>Edit Movements</h3>
                     <form>
-                        <input defaultValue={editMov.concept} type="text" name="concept"  onChange={capEntry} required="true"></input>
+                        <input defaultValue={editMov.concept} type="text" name="concept"  onChange={capEntry} ></input>
                         <input defaultValue={editMov.amount} type="number" name="amount"  onChange={capEntry}></input>
                         <input  defaultValue={editMov.date}type="date" name="date" onChange={capEntry} ></input>
                         <Button color="danger" onClick={()=>deleteMov(editMov._id)}>Delete</Button>

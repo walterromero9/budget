@@ -24,12 +24,10 @@ const movReducer = (state = initialState, action) =>{
             return {
                 ...state,
                 mov:action.payload,
-                
             }
         case 'REMOVE_MOV':
               return state
         case 'EDITED_MOV':
-            console.log(action.payload)
         return state
         default:
             return state

@@ -4,7 +4,7 @@ import {Link} from 'react-router-dom'
 import { connect } from 'react-redux';
 import movActions from '../redux/actions/movActions';
 const Home = (props) => {
-    var positive = props.mov.reduce((sum,value) => (value.type == "Entry" ? sum + value.amount : sum), 0)
+    var positive  = props.mov.reduce((sum,value) => (value.type == "Entry" ? sum + value.amount : sum), 0)
     var negative = props.mov.reduce((res,value) => (value.type == "Egress" ? res - value.amount : res), 0)
     var total = (positive + negative)
     var valores = props.mov
@@ -25,8 +25,6 @@ if (valoresNew.length === 0 ) {
         </div>
     )
 }
-    
-    
     return (
         <div className="containerHome">
             <div className="infoHome">

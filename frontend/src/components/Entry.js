@@ -43,8 +43,8 @@ const Entry = (props) => {
                         <input type="number" name="amount" placeholder="Amount" onChange={capEntry}></input>
                         <input type="date" name="date" onChange={capEntry} ></input>
                         <select name="type" onChange={capEntry} className="selectType">
-                            <option value="" disabled selected>Select type</option>
-                            <option>Entry</option>
+                        <option value="" hidden>Select type</option>
+                            <option >Entry</option>
                             <option>Egress</option>
                         </select>
                     </form>
